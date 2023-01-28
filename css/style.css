@@ -296,7 +296,7 @@ body {
 }
 .disclaimer__decor img {
   display: block;
-  max-width: 100%;
+  width: 100%;
 }
 .disclaimer__title {
   font-family: "Eczar", serif;
