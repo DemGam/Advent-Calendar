@@ -19,7 +19,7 @@
     let fullDate = new Date;
     let currentDay = fullDate.getDate();
     if (calendar) {
-        if (currentDay <= 15) xhrCalendar.open("get", "../../files/calendar_data.xml", true); else xhrCalendar.open("get", "../../files/calendar_data_second.xml", true);
+        if (currentDay <= 15) xhrCalendar.open("get", "../files/calendar_data.xml", true); else xhrCalendar.open("get", "../files/calendar_data_second.xml", true);
         xhrCalendar.send();
         xhrCalendar.onreadystatechange = function readXML() {
             if (4 == xhrCalendar.readyState) {
@@ -63,7 +63,7 @@
     const monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
     let currentMonth = monthNames[fullDate.getMonth()];
     if (winners) {
-        xhrWinnersCurrent.open("get", "../../files/winners-current.xml", true);
+        xhrWinnersCurrent.open("get", "../files/winners-current.xml", true);
         xhrWinnersCurrent.send();
         xhrWinnersCurrent.onreadystatechange = function readXML() {
             if (4 == xhrWinnersCurrent.readyState) if (200 == xhrWinnersCurrent.status) {
@@ -96,7 +96,7 @@
     }
     const xhrWinnersPast = new XMLHttpRequest;
     if (winners) {
-        xhrWinnersPast.open("get", "../../files/winners-past.xml", true);
+        xhrWinnersPast.open("get", "../files/winners-past.xml", true);
         xhrWinnersPast.send();
         xhrWinnersPast.onreadystatechange = function readXML() {
             if (4 == xhrWinnersPast.readyState) if (200 == xhrWinnersPast.status) {
