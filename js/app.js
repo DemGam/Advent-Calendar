@@ -19,7 +19,7 @@
     let fullDate = new Date;
     let currentDay = fullDate.getDate();
     if (calendar) {
-        if (currentDay <= 15) xhrCalendar.open("get", "../files/calendar_data.xml", true); else xhrCalendar.open("get", "../files/calendar_data_second.xml", true);
+        if (currentDay <= 15) xhrCalendar.open("get", "files/calendar_data.xml", true); else xhrCalendar.open("get", "files/calendar_data_second.xml", true);
         xhrCalendar.send();
         xhrCalendar.onreadystatechange = function readXML() {
             if (4 == xhrCalendar.readyState) {
@@ -36,7 +36,7 @@
                         }
                         if (parseInt(date) > currentDay) calendar.insertAdjacentHTML("beforeend", `<div class="calendar__box"><h3 class="calendar__day">${date}</h3></div>`);
                     }
-                    calendar.insertAdjacentHTML("beforeend", `<div class="calendar__box calendar__box_decor"><img src="img/gifts/bells.jpg" alt="X-mass bells"></div>`);
+                    calendar.insertAdjacentHTML("beforeend", `<div class="calendar__box calendar__box_decor"><img src="img/gifts/bells.webp" alt="X-mass bells"></div>`);
                     checkCurrentDayBox();
                 }
                 if (404 == xhrCalendar.status) {
@@ -63,7 +63,7 @@
     const monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
     let currentMonth = monthNames[fullDate.getMonth()];
     if (winners) {
-        xhrWinnersCurrent.open("get", "../files/winners-current.xml", true);
+        xhrWinnersCurrent.open("get", "files/winners-current.xml", true);
         xhrWinnersCurrent.send();
         xhrWinnersCurrent.onreadystatechange = function readXML() {
             if (4 == xhrWinnersCurrent.readyState) if (200 == xhrWinnersCurrent.status) {
@@ -96,7 +96,7 @@
     }
     const xhrWinnersPast = new XMLHttpRequest;
     if (winners) {
-        xhrWinnersPast.open("get", "../files/winners-past.xml", true);
+        xhrWinnersPast.open("get", "files/winners-past.xml", true);
         xhrWinnersPast.send();
         xhrWinnersPast.onreadystatechange = function readXML() {
             if (4 == xhrWinnersPast.readyState) if (200 == xhrWinnersPast.status) {

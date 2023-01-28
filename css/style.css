@@ -230,7 +230,7 @@ body {
 }
 
 .footer {
-  background-image: url("../img/pine.png");
+  background-image: url("../img/pine.webp");
   background-repeat: repeat-x;
   background-position: bottom center;
   padding-bottom: 3.125rem;
@@ -321,7 +321,7 @@ body {
 }
 
 body {
-  background-image: url("../img/bg.jpg");
+  background-image: url("../img/bg.webp");
   background-repeat: repeat-x;
   background-position: top center;
 }
@@ -332,7 +332,7 @@ body::before {
   top: 0;
   height: 80px;
   width: 100%;
-  background-image: url("../img/pine.png");
+  background-image: url("../img/pine.webp");
   background-repeat: repeat-x;
   background-position: top;
   transform: rotate(180deg);
@@ -356,7 +356,7 @@ body::before {
   border-radius: 0.625rem;
   padding: 0.625rem;
   height: auto;
-  background: linear-gradient(115deg, rgba(0, 0, 0, 0.4), rgba(104, 126, 36, 0.3019607843)), center/cover url("../img/santa.jpg") no-repeat;
+  background: linear-gradient(115deg, rgba(0, 0, 0, 0.4), rgba(104, 126, 36, 0.3019607843)), center/cover url("../img/santa.webp") no-repeat;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
