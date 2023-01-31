@@ -91,11 +91,12 @@
                     let prizeBlock = `<p class="card-winner__prize">${prize}</p>`;
                     createCardWinnerDiv(dayBlock, winDataBlock, prizeBlock);
                 }
+                winnersPastXHRequest();
             }
         };
     }
     const xhrWinnersPast = new XMLHttpRequest;
-    if (winners) {
+    function winnersPastXHRequest() {
         xhrWinnersPast.open("get", "files/winners-past.xml", true);
         xhrWinnersPast.send();
         xhrWinnersPast.onreadystatechange = function readXML() {
