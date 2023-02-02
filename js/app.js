@@ -79,7 +79,7 @@
                     cardsWinnerDiv.appendChild(cardWinnerDiv);
                 }
                 let dayWinners = winnersData.getElementsByTagName("winner");
-                for (var i = 0; i < currentDay; i++) {
+                for (var i = 0; i + 1 < currentDay; i++) {
                     let day = dayWinners[i].getElementsByTagName("day")[0].textContent;
                     let name = dayWinners[i].getElementsByTagName("name")[0].textContent;
                     let town = dayWinners[i].getElementsByTagName("town")[0].textContent;
